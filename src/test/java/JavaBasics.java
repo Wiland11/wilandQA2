@@ -8,7 +8,6 @@ public class JavaBasics {
     public void firstTest() {
         Integer a = 85;
         Integer b = 15;
-        Integer sumToCheck = 100;
 
         Integer c = 45;
         Integer d = 55;
