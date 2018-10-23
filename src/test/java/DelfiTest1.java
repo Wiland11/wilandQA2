@@ -20,22 +20,21 @@ public class DelfiTest1 {
         browser.get("http://rus.delfi.lv/");
 
         List<WebElement> webArticlesList = browser.findElements(WEB_ARTICLES_LIST);
-        List<String> webArticlesText = new ArrayList<String>();
+        List<String> webArticlesTexts = new ArrayList<String>();
 
-        int i;
-        for (i = 0; i < 5; i++) {
-            webArticlesText.add(webArticlesList.get(i).getText());
+        for (int i = 0; i < 5; i++) {
+            webArticlesTexts.add(webArticlesList.get(i).getText());
         }
 
         browser.get("http://m.rus.delfi.lv/");
 
         List<WebElement> mobArticlesList = browser.findElements(MOB_ARTICLES_LIST);
-        List<String> mobArticlesText = new ArrayList<String>();
-        for (i = 0; i < 5; i++) {
-            mobArticlesText.add(mobArticlesList.get(i).getText());
+        List<String> mobArticlesTexts = new ArrayList<String>();
+        for (int i = 0; i < 5; i++) {
+            mobArticlesTexts.add(mobArticlesList.get(i).getText());
         }
 
-        Assertions.assertArrayEquals(new List[]{webArticlesText}, new List[]{mobArticlesText}, "articles not equals");
+        Assertions.assertTrue(webArticlesTexts.equals(mobArticlesTexts), "articles not equals");
         browser.close();
     }
 }
