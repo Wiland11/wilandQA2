@@ -34,7 +34,7 @@ public class DelfiTest1 {
             mobArticlesTexts.add(mobArticlesList.get(i).getText());
         }
 
-        Assertions.assertTrue(webArticlesTexts.equals(mobArticlesTexts), "articles not equals");
+        Assertions.assertEquals(webArticlesTexts, mobArticlesTexts, "articles not equals");
         browser.close();
     }
 }
