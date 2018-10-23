@@ -23,6 +23,7 @@ public class DressTest {
             System.out.println(element.getText());
             if (element.getText().equals("WOMAN")) {
                 element.click();
+                
             }
 
         }
