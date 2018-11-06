@@ -9,7 +9,8 @@ import java.util.List;
 
 public class DressTest {
     private final By MAIN_MENU = By.xpath(".//a[@class='sf-with-ul']");
-    private final By WONEN_FILTER_MENU = By.xpath(".//ul[@id='ul_layered_id_attribute_group_3']");
+    private final By COLOR_FILTER = By.xpath(".//ul[@id='ul_layered_id_attribute_group_3']/li");
+    private final By CATEGORIES_FILTER = By.xpath(".//ul[@id='ul_layered_category_0']");
 
     @Test
     public void orangeDressTest(){
@@ -29,9 +30,9 @@ public class DressTest {
         }
         Assertions.assertTrue(menuAssert, "Menu Element not found");
 
-        List<WebElement> categoriesMenuList = browser.findElements(CATEGORIES_FILTER_MENU);
+        List<WebElement> categoriesFilter = browser.findElements(CATEGORIES_FILTER);
         boolean categoriesAssert = false;
-        for (WebElement element : categoriesMenuList) {
+        for (WebElement element : categoriesFilter) {
             if (element.getText().contains("Dresses")) {
                 element.click();
                 categoriesAssert = true;
@@ -46,12 +47,10 @@ public class DressTest {
             Thread.currentThread().interrupt();
         }
 
-        List<WebElement> colorMenuList = browser.findElements(COLOR_FILTER_MENU);
+        List<WebElement> colorFilter = browser.findElements(COLOR_FILTER);
         boolean colorAssert = false;
-        for (WebElement element : colorMenuList) {
+        for (WebElement element : colorFilter) {
             if (element.getText().contains("Orange")) {
-                element.click();
-                element.click();
                 element.click();
                 colorAssert = true;
                 break;
@@ -63,12 +62,9 @@ public class DressTest {
 
         //            System.out.println(element.getText());
 
-
-//        for (int i = 0; i < womenMenuList.size(); i++) {
-//            System.out.println(womenMenuList.get(i).getText());
+//        for (int i = 0; i < colorFilter.size(); i++) {
+//            System.out.println(i + ": " + colorFilter.get(i).getText());
 //        }
+
     }
-
-
-
 }
