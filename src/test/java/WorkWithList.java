@@ -28,3 +28,20 @@ public class WorkWithList {
         }
     }
 }
+
+
+//       browser.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+//        try {
+//            Thread.sleep(10000);
+//        } catch(InterruptedException ex) {
+//            Thread.currentThread().interrupt();
+//        }
+
+//            System.out.println(element.getText());
+
+//        for (int i = 0; i < colorFilter.size(); i++) {
+//            System.out.println(i + ": " + colorFilter.get(i).getText());
+//        }
+

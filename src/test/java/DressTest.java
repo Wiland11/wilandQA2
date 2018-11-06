@@ -6,24 +6,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 
 public class DressTest {
     private final By MAIN_MENU = By.xpath(".//a[@class='sf-with-ul']");
     private final By COLOR_FILTER = By.xpath(".//ul[@id='ul_layered_id_attribute_group_3']/li");
     private final By CATEGORIES_FILTER = By.xpath(".//ul[@id='ul_layered_category_0']");
+    private final By LOADING = By.xpath(".//ul[@class='product_list row list']/p");
 
     @Test
     public void orangeDressTest(){
         System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(browser, 30);
         browser.manage().window().maximize();
- //       browser.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-//        WebDriverWait wait = new WebDriverWait(browser, 30);
-//        wait.until(ExpectedConditions.invisibilityOfElementLocated( ));
 
         browser.get("http://automationpractice.com/index.php");
 
@@ -49,11 +46,7 @@ public class DressTest {
         }
         Assertions.assertTrue(categoriesAssert, "Categories menu Element not found");
 
-//        try {
-//            Thread.sleep(10000);
-//        } catch(InterruptedException ex) {
-//            Thread.currentThread().interrupt();
-//        }
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(LOADING));
 
         List<WebElement> colorFilter = browser.findElements(COLOR_FILTER);
         boolean colorAssert = false;
@@ -67,12 +60,5 @@ public class DressTest {
         Assertions.assertTrue(colorAssert, "Color menu Element not found");
 
 //        browser.close();
-
-        //            System.out.println(element.getText());
-
-//        for (int i = 0; i < colorFilter.size(); i++) {
-//            System.out.println(i + ": " + colorFilter.get(i).getText());
-//        }
-
     }
 }
