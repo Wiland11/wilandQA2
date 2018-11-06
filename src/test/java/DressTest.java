@@ -4,8 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class DressTest {
     private final By MAIN_MENU = By.xpath(".//a[@class='sf-with-ul']");
@@ -17,6 +20,11 @@ public class DressTest {
         System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
         browser.manage().window().maximize();
+ //       browser.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+//        WebDriverWait wait = new WebDriverWait(browser, 30);
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated( ));
+
         browser.get("http://automationpractice.com/index.php");
 
         List<WebElement> mainMenuList = browser.findElements(MAIN_MENU);
@@ -41,11 +49,11 @@ public class DressTest {
         }
         Assertions.assertTrue(categoriesAssert, "Categories menu Element not found");
 
-        try {
-            Thread.sleep(10000);
-        } catch(InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+//        try {
+//            Thread.sleep(10000);
+//        } catch(InterruptedException ex) {
+//            Thread.currentThread().interrupt();
+//        }
 
         List<WebElement> colorFilter = browser.findElements(COLOR_FILTER);
         boolean colorAssert = false;
