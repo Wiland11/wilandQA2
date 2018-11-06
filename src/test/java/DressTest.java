@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class DressTest {
@@ -20,6 +21,7 @@ public class DressTest {
         System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(browser, 30);
+        browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         browser.manage().window().maximize();
 
         browser.get("http://automationpractice.com/index.php");
