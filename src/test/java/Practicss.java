@@ -66,7 +66,7 @@ public class Practicss {
 //    Remove brackets
         registeredComments = registeredComments.substring(1, registeredComments.length() - 1);
 //    Remake comments from String ti Integer
-        Integer registredCommentsToCheck = Integer.valueOf(registeredComments);
+        Integer registeredCommentsToCheck = Integer.valueOf(registeredComments);
 //    Find comments of anonymous users
         String anonymousComments = browser.findElement(ANONYMOUS_COMMENTS).getText();
 //    Remove brackets
@@ -74,7 +74,7 @@ public class Practicss {
 //    Remake comments from String ti Integer
         Integer anonymousCommentsToCheck = Integer.valueOf(anonymousComments);
 //    Get sum of comments
-        Integer sumOfComments = anonymousCommentsToCheck + registredCommentsToCheck;
+        Integer sumOfComments = anonymousCommentsToCheck + registeredCommentsToCheck;
 //    Assert given with our sum
         Assertions.assertEquals(commentsToCheck, sumOfComments, "Sum of comments not equal");
     }
