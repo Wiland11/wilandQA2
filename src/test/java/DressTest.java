@@ -47,9 +47,9 @@ public class DressTest {
             Thread.currentThread().interrupt();
         }
 
-        List<WebElement> womenMenuList = browser.findElements(COLOR_FILTER_MENU);
+        List<WebElement> colorMenuList = browser.findElements(COLOR_FILTER_MENU);
         boolean colorAssert = false;
-        for (WebElement element : womenMenuList) {
+        for (WebElement element : colorMenuList) {
             if (element.getText().contains("Orange")) {
                 element.click();
                 element.click();
