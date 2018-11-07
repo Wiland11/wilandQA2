@@ -20,7 +20,7 @@ public class DressTest {
     public void orangeDressTest(){
         System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(browser, 30);
+        WebDriverWait wait = new WebDriverWait(browser, 10);
         browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         browser.manage().window().maximize();
 
