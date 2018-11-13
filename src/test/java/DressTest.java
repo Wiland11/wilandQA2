@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class DressTest {
     private final By MAIN_MENU = By.xpath(".//a[@class='sf-with-ul']");
     private final By COLOR_FILTER = By.xpath(".//ul[@id='ul_layered_id_attribute_group_3']/li");
-    private final By CATEGORIES_FILTER = By.xpath(".//ul[@id='ul_layered_category_0']");
+    private final By CATEGORIES_FILTER = By.xpath(".//ul[@id='ul_layered_category_0']/li");
     private final By LOADING = By.xpath(".//ul[@class='product_list row list']/p");
 
     @Test
