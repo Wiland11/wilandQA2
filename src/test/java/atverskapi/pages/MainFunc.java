@@ -9,25 +9,24 @@ import java.util.List;
 
 
 public class MainFunc {
-        WebDriver driver;
+    WebDriver driver;
 
-        public MainFunc() {
-            System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
-        }
-
-        public void goToURL(String url) {
-            if (!url.contains("http://") && !url.contains("https://")) {
-                url = "http://" + url;
-            }
-            driver.get(url);
-        }
-
-        public List<WebElement> getElements(By locator) {
-            return driver.findElements(locator);
-        }
-
-
+    public MainFunc() {
+        System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
+    public void goToURL(String url) {
+        if (!url.contains("http://") && !url.contains("https://")) {
+            url = "http://" + url;
+        }
+        driver.get(url);
+    }
+
+    public List<WebElement> getElements(By locator) {
+        return driver.findElements(locator);
+    }
+
+
+}

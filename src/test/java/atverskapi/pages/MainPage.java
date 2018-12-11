@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -17,8 +18,8 @@ public class MainPage {
         this.mainFunc = mainFunc;
     }
 
-    public ShopsPage goToShotsPage() {
-        List<WebElement> mainMenuList = new MainFunc().getElements(SHOPS_PAGE);
+    public ShopsPage goToShopsPage() {
+        List<WebElement> mainMenuList = new ArrayList<WebElement>(mainFunc.getElements(SHOPS_PAGE));
         boolean menuAssert = false;
         for (WebElement element: mainMenuList) {
             if (element.getText().equals("Магазины")) {

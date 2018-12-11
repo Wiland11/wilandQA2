@@ -13,7 +13,7 @@ public class ShopCommentTest {
     public void commentsCheck() {
         mainFunc.goToURL(HOME_PAGE);
         MainPage mainPage = new MainPage(mainFunc);
-        ShopsPage shopsPage = mainPage.goToShotsPage();
+        ShopsPage shopsPage = mainPage.goToShopsPage();
 
     }
 }
