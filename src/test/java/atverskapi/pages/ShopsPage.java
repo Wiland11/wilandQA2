@@ -12,7 +12,7 @@ public class ShopsPage {
 
     private final By SHOPS_LIST = By.xpath(".//div[@class = 'col-xs-6 col-sm-3']");
     private final By SHOPS_COMMENTS = By.xpath(".//div[@class = 'card-info-user-rating-stars']");
-    private final String SHOP_NAME = "KIDS & MOMS";
+    private final String SHOP_NAME = "Duets Veikals";
 
     public ShopsPage(MainFunc mainFunc) {
         this.mainFunc = mainFunc;
