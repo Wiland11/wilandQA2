@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -14,8 +14,8 @@ public class BaseFunctions {
     WebDriver driver;
 
     public BaseFunctions() {
-        System.setProperty("webdriver.gecko.driver", "C:/WebDrivers/geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
@@ -40,5 +40,12 @@ public class BaseFunctions {
         return driver.findElements(locator);
     }
 
+    public WebElement getElement (By locator) {
+        return driver.findElement(locator);
+    }
+
+    public void writeInTextBox(WebElement element, String text) {
+        element.sendKeys(text);
+    }
 
 }

@@ -8,13 +8,13 @@ Feature: Ticket reservation
     Then registration page appears
 
     When I fill registration form with:
-      | name          | Edgars      |
-      | surname       | Prokopovics |
-      | discountCode  | 12345       |
-      | personCount   | 2           |
-      | childrenCount | 0           |
-      | luggageCount  | 1           |
-      | departureDate | 16-05-2018  |
+      | name          | Jurijs     |
+      | surname       | Uljanovs   |
+      | discountCode  | 12345      |
+      | personCount   | 2          |
+      | childrenCount | 0          |
+      | luggageCount  | 1          |
+      | departureDate | 16-05-2018 |
     And I click on Get Price button
     Then I get price for current flight: 220 EUR
 
