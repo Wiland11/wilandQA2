@@ -1,4 +1,4 @@
-package FinalHomework.model;
+package finalHomework.model;
 
 public class Reservations {
     private String id;

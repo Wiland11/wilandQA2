@@ -1,6 +1,6 @@
-package FinalHomework;
+package finalHomework;
 
-import apiTests.model.Response;
+import finalHomework.model.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,6 +14,6 @@ public class ReservationRequester {
         String responceToParse = restTemplate.getForEntity(url, String.class).getBody();
 
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValues(responceToParse, Response.class);
-    }
+        return objectMapper.readValue(responceToParse, Response.class);
+   }
 }

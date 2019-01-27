@@ -1,4 +1,4 @@
-package FinalHomework.pages;
+package finalHomework.pages;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;

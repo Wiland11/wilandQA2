@@ -1,15 +1,15 @@
-package FinalHomework;
+package finalHomework;
 
-import FinalHomework.pages.BaseFunctions;
-import FinalHomework.pages.ConfirmationPage;
-import FinalHomework.pages.HomePage;
-import FinalHomework.pages.RegistrationPage;
-import apiTests.model.Response;
-import cucumber.api.java.After;
+import finalHomework.pages.BaseFunctions;
+import finalHomework.pages.ConfirmationPage;
+import finalHomework.pages.HomePage;
+import finalHomework.pages.RegistrationPage;
+import finalHomework.model.Response;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class ReservationStepDefinitions {
@@ -100,7 +100,8 @@ public class ReservationStepDefinitions {
     }
 
     @When("I request reservations list")
-    public void request_reservation_list() {
+    public void request_reservation_list() throws IOException {
+
         response = requester.getReservationsList();
     }
 
@@ -109,9 +110,9 @@ public class ReservationStepDefinitions {
 
     }
 
-    @After("I delete my reservation")
-    public void delete_my_reservation() {
+    //@After("I delete my reservation")
+    //public void delete_my_reservation() {
 
-    }
+    //}
 
 }

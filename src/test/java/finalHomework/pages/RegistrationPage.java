@@ -1,4 +1,4 @@
-package FinalHomework.pages;
+package finalHomework.pages;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -66,9 +66,10 @@ public class RegistrationPage {
     }
 
     public void assertionPrice(Integer price) {
+        baseFunctions.waitForElement(GET_PRICE_TEXT);
         String textWithPrice = baseFunctions.getElement(GET_PRICE_TEXT).getText();
         String textWithoutReservationNumber = textWithPrice.substring(0, textWithPrice.length() -10);
-        Integer ourPrice = Integer.parseInt(textWithoutReservationNumber.replaceAll("[\\D]", ""));
+        Integer ourPrice = Integer.parseInt(textWithoutReservationNumber.replaceAll("[\\D+]", ""));
         Assertions.assertEquals(price, ourPrice, "wrong ticked price");
     }
 
