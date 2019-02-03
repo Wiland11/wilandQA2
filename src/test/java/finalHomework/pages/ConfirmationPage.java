@@ -14,6 +14,7 @@ public class ConfirmationPage {
     }
 
     public void checkConfirmationPage() {
+        baseFunctions.waitForElement(FINAL_TEXT);
         Assertions.assertTrue(baseFunctions.getElement(FINAL_TEXT).isDisplayed(), "Incorrect Confirmation Page");
     }
 

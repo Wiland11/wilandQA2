@@ -50,7 +50,12 @@ public class BaseFunctions {
         element.sendKeys(text);
     }
 
-    public void waitForElement(By locator) {
+    public void waitForInvisibilityOfElement(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.invisibilityOfElementWithText(locator, "Price will be calculated here!"));
+    }
+
+    public void waitForElement (By locator) {
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }

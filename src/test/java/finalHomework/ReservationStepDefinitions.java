@@ -1,5 +1,6 @@
 package finalHomework;
 
+import cucumber.api.java.After;
 import finalHomework.pages.BaseFunctions;
 import finalHomework.pages.ConfirmationPage;
 import finalHomework.pages.HomePage;
@@ -101,7 +102,6 @@ public class ReservationStepDefinitions {
 
     @When("I request reservations list")
     public void request_reservation_list() throws IOException {
-
         response = requester.getReservationsList();
     }
 
@@ -110,9 +110,9 @@ public class ReservationStepDefinitions {
 
     }
 
-    //@After("I delete my reservation")
-    //public void delete_my_reservation() {
+    @After
+    public void delete_my_reservation() {
 
-    //}
+    }
 
 }

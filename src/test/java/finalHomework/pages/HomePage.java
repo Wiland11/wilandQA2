@@ -10,7 +10,6 @@ public class HomePage {
     private final By ARRIVAL_DROPDOWN = By.id("bfrom");
     private final By GOGOGO_BUTTON = By.xpath(".//span[@class='gogogo']");
 
-    //в каждом пейдже нужно передать браузер в конструктор
     public HomePage(BaseFunctions baseFunctions) {
         this.baseFunctions = baseFunctions;
     }

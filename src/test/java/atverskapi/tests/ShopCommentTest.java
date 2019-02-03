@@ -1,11 +1,11 @@
 package atverskapi.tests;
 
-import atverskapi.pages.MainFunc;
-import atverskapi.pages.MainPage;
-import atverskapi.pages.ShopPage;
-import atverskapi.pages.ShopsPage;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+        import atverskapi.pages.MainFunc;
+        import atverskapi.pages.MainPage;
+        import atverskapi.pages.ShopPage;
+        import atverskapi.pages.ShopsPage;
+        import org.junit.jupiter.api.Assertions;
+        import org.junit.jupiter.api.Test;
 
 public class ShopCommentTest {
     MainFunc mainFunc = new MainFunc();
