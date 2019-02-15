@@ -68,7 +68,7 @@ public class RegistrationPage {
     public void assertionPrice(Integer price) {
         baseFunctions.waitForInvisibilityOfElement(GET_PRICE_TEXT);
         String textWithPrice = baseFunctions.getElement(GET_PRICE_TEXT).getText();
-        String textWithoutReservationNumber = textWithPrice.substring(0, textWithPrice.length() -10);
+        String textWithoutReservationNumber = textWithPrice.substring(0, textWithPrice.length() - 10);
         Integer ourPrice = Integer.parseInt(textWithoutReservationNumber.replaceAll("[\\D+]", ""));
         Assertions.assertEquals(price, ourPrice, "wrong ticked price");
     }
@@ -78,7 +78,7 @@ public class RegistrationPage {
     }
 
     public void selectSeatPlace(Integer seat) {
-        baseFunctions.getElements(SEATS_FORM).get(seat).click();
+        baseFunctions.getElements(SEATS_FORM).get(seat - 1).click();
     }
 
     public void assertSeatConformationMessage() {
@@ -95,6 +95,7 @@ public class RegistrationPage {
     }
 
     public void checkSeatPage() {
+        baseFunctions.waitForElement(SEATS_FORM);
         Assertions.assertTrue(baseFunctions.getElement(SEATS_FORM).isDisplayed(), "Incorrect Seat page");
     }
 

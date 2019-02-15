@@ -108,11 +108,13 @@ public class ReservationStepDefinitions {
     @Then("my reservation is in this list")
     public void check_my_reservation() {
 
+
     }
 
     @After
     public void delete_my_reservation() {
-
+        //delete my reservation
+  //      baseFunc.browaerClose();
     }
 
 }

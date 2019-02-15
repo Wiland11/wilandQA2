@@ -60,4 +60,9 @@ public class BaseFunctions {
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
+    public void browaerClose() {
+        driver.close();
+    }
+
+
 }
